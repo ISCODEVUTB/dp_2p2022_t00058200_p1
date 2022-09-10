@@ -1,29 +1,19 @@
-from personaje import Personajes
+from personajes import Personajes
 
-class Artificiales(Personajes):
-  
-  _laboratorio_creacion:str
-  def __init__(
-    self, 
-    nombre: str, 
-    edad: int, 
-    sexo: str, 
-    descripcion: str,
-    laboratorio:str
-  ) -> None:
-    super().__init__(nombre, edad, sexo, descripcion)
-    self._laboratorio_creacion = laboratorio
-    
-  @property
-  def laboratorio(self)->str:
-    return self._laboratorio_creacion
 
-  @laboratorio.setter
-  def laboratorio(self,laboratorio:str)->None:
-    self._laboratorio_creacion = laboratorio
+class Alienz(Personajes):
+    _laboratory: str
 
-  
-  
-  
-  
-    
+    def __init__(
+            self, name: str, age: int, sex: str, description: str, laboratory: str
+    ):
+        super().__init__(name, age, sex, description)
+        self._laboratory = laboratory
+
+    @property
+    def laboratory(self) -> str:
+        return self._laboratory
+
+    @laboratory.setter
+    def galaxy(self, laboratory: str) -> None:
+        self._laboratory=laboratory

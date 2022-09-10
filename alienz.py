@@ -1,27 +1,19 @@
-from personaje import Personajes
+from personajes import Personajes
+
 
 class Alienz(Personajes):
-  _galaxia_nacimiento:str
-  def __init__(
-    self, 
-    nombre: str, 
-    edad: int, 
-    sexo: str, 
-    descripcion: str,
-    galaxia_nac:str,
-  ) -> None:
-    super().__init__(nombre, edad, sexo, descripcion)
-    self._galaxia_nacimiento = galaxia_nac
-    
-  @property
-  def galaxia_nacimiento(self)->str:
-    return self._galaxia_nacimiento
+    _galaxy: str
 
-  @galaxia_nacimiento.setter
-  def galaxia_nacimiento(self,galaxia:str)->None:
-    self._galaxia_nacimiento = galaxia
-  
-  
-  
-  
-    
+    def __init__(
+            self, name: str, age: int, sex: str, description: str, galaxy: str
+    ):
+        super().__init__(name, age, sex, description)
+        self._galaxy = galaxy
+
+    @property
+    def galaxy(self) -> str:
+        return self._galaxy
+
+    @galaxy.setter
+    def galaxy(self, galaxy: str) -> None:
+        self._galaxy = galaxy
