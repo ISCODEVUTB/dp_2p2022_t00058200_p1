@@ -7,9 +7,9 @@ class Humanos(Personajes):
 
     # contructor de la clase
     def __init__(self, name: str, age: int, sex: str, description: str, birth_continent: str, country: str):
+        super().__init__(name, age, sex, description)
         self._birth_continent = birth_continent
         self._country = country
-        super().__init__(name, age, sex, description)
 
     @property
     def birth_continent(self) -> str:

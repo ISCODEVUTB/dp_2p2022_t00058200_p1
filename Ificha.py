@@ -12,5 +12,10 @@ class IFicha(metaclass=ABCMeta):
         pass
 
     @abstractmethod
+    def league(self, liga: str):
+        pass
+
+    @abstractmethod
     def enemy(self, personaje):
         pass
+

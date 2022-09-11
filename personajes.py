@@ -15,9 +15,9 @@ class Personajes(ABC, IFicha):
     _description: str
     _league: str
     _enemy: list = []
-    _characterizations: list[Caracterizacion] = []
+    _characterizations = []
 
-    def __int__(self, name: str, age: int, sex: str, description: str):
+    def __init__(self, name: str, age: int, sex: str, description: str):
         self._name = name
         self._description = description
         self._age = age
@@ -53,13 +53,18 @@ class Personajes(ABC, IFicha):
     def sex(self, sex: str) -> None:
         self._sex = sex
 
-    @description.setterx
+    @description.setter
     def description(self, des: str) -> None:
         self._description = des
 
     # methods of interface Ificha
+
     def league(self, liga: str):
         self._league = liga
+
+    @property
+    def liga(self) -> str:
+        return self._league
 
     def add(self, caracterizacion: Caracterizacion):
         self._characterizations.append(caracterizacion)
@@ -68,6 +73,9 @@ class Personajes(ABC, IFicha):
     def enemy(self, personaje):
         self._enemy.append(personaje)
 
+    @property
+    def characterizations(self):
+        return self._characterizations
     def to_string(self):
         print('''
             nombre :{}
