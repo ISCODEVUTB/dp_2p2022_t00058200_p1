@@ -3,7 +3,8 @@ author : Gian franco valdiris Cerpa
 """
 from abc import ABC
 from Ificha import IFicha
-
+from caracterizacion import Caracterizacion
+from typing import List
 # abstrac class personajes
 
 
@@ -13,6 +14,8 @@ class Personajes(ABC, IFicha):
     _sex: str
     _description: str
     _league: str
+    _enemy: list = []
+    _characterizations: list[Caracterizacion] = []
 
     def __int__(self, name: str, age: int, sex: str, description: str):
         self._name = name
@@ -50,19 +53,20 @@ class Personajes(ABC, IFicha):
     def sex(self, sex: str) -> None:
         self._sex = sex
 
-    @description.setter
+    @description.setterx
     def description(self, des: str) -> None:
         self._description = des
 
     # methods of interface Ificha
-    def league(self):
-        print('liga')
+    def league(self, liga: str):
+        self._league = liga
 
-    def add(self):
-        print('add')
+    def add(self, caracterizacion: Caracterizacion):
+        self._characterizations.append(caracterizacion)
+        print('se añadio la caracterizacion al personaje')
 
-    def enemy(self):
-        print('enemy')
+    def enemy(self, personaje):
+        self._enemy.append(personaje)
 
     def to_string(self):
         print('''

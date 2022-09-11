@@ -1,5 +1,5 @@
 from caracterizacion import Caracterizacion
-print('Hola')
+
 
 class Personalidades(Caracterizacion):
     _nane_personalities: str
