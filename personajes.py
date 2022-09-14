@@ -6,8 +6,6 @@ from Ificha import IFicha
 from caracterizacion import Caracterizacion
 from typing import List
 # abstrac class personajes
-
-
 class Personajes(ABC, IFicha):
     _name: str
     _age: int
