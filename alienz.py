@@ -7,7 +7,6 @@ class Alienz(Personajes):
     ):
         super().__init__(name, age, sex, description)
         self._galaxy = galaxy
-
     @property
     def galaxy(self) -> str:
         return self._galaxy
