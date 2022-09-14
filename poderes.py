@@ -9,7 +9,7 @@ class Poderes(Caracterizacion):
     def __init__(self, name: str, name_power: str, level_power: str):
         super().__init__(name)
         self._level_power = level_power
-        self._name_power: str
+        self._name_power = name_power
 
     @property
     def level_power(self) -> str:

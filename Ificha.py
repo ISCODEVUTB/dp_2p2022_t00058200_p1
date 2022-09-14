@@ -4,7 +4,7 @@ from caracterizacion import  Caracterizacion
 class IFicha(metaclass=ABCMeta):
 
     @abstractmethod
-    def add(self, caracterizacion: Caracterizacion):
+    def add(self, caracterizacion: Caracterizacion) -> bool:
         pass
 
     @abstractmethod

@@ -13,7 +13,7 @@ class Personajes(ABC, IFicha):
     _age: int
     _sex: str
     _description: str
-    _league: str
+    _league = None
     _enemy: list = []
     _characterizations = []
 
@@ -22,6 +22,7 @@ class Personajes(ABC, IFicha):
         self._description = description
         self._age = age
         self._sex = sex
+        self._characterizations=[]
 
     # setters and getters methods
 
@@ -69,6 +70,7 @@ class Personajes(ABC, IFicha):
     def add(self, caracterizacion: Caracterizacion):
         self._characterizations.append(caracterizacion)
         print('se añadio la caracterizacion al personaje')
+        return True
 
     def enemy(self, personaje):
         self._enemy.append(personaje)

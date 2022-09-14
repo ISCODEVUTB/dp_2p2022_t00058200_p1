@@ -1,7 +1,7 @@
 from personajes import Personajes
 
 
-class Alienz(Personajes):
+class Artificial(Personajes):
     _laboratory: str
 
     def __init__(
