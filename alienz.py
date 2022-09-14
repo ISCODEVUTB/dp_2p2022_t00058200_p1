@@ -1,6 +1,4 @@
 from personajes import Personajes
-
-
 class Alienz(Personajes):
     _galaxy: str
 
