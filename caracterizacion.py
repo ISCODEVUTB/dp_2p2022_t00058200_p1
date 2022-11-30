@@ -1,6 +1,4 @@
 from abc import ABC
-
-
 class Caracterizacion(ABC):
     _name_caracterizacion: str
 
